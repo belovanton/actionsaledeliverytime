@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                        <komplizierte_actionsaledeliverytime translate="title" module="komplizierte_actionsaledeliverytime">
+                                            <title>actionsaledeliverytime</title>
+                                        </komplizierte_actionsaledeliverytime>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

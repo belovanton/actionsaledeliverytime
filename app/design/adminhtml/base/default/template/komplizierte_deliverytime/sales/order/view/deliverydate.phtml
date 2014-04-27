@@ -1,0 +1,37 @@
+<?php if($this->displayDeliveryDate() && $this->getSelectedDate()): ?>
+<div class="entry-edit" style="margin-bottom: 10px;">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-attributes">Delivery Date</h4>
+        <div class="tools">
+
+        </div>
+    </div>
+    <fieldset id="deliverydate">
+        <table cellspacing="0" class="form-list">
+            <tbody>
+            <tr>
+                <td class="label">
+                    <label for="shipping-deliverydate"><?php echo $this->__('Desired Delivery Date:') ?></label>
+                    <div class="input-box">
+                    <?php if($this->getDeliveryDateArrayOptions()): ?>
+                        <select id="shipping-deliverydate" name="komplizierte_delivery_date" title="<?php echo $this->__('Desired Delivery Date') ?>">
+                            <?php
+                            $dates = $this->getDeliveryDateArrayOptions();
+                            foreach($dates as $date => $label):
+                                ?>
+                                <option value="<?php echo $date; ?>" <?php if($date == $this->getSelectedDeliveryDate()) echo ' selected="selected"';?>><?php echo $label; ?></option>
+                            <?php
+                            endforeach;
+                            ?>
+                        </select>
+                        <?php endif?>
+                        <?php echo $this->getSelectedDate();?>
+                    </div>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</div>
+<?php endif ?>

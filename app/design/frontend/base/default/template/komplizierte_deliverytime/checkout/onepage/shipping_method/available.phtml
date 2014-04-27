@@ -1,0 +1,22 @@
+    <ul id="delivery-dates" class="form-list">
+    <?php if($dates = $this->getDeliveryDateArrayOptions()): ?>
+        <li>
+            <label for="shipping-deliverydate"><?php echo $this->__('Desired Delivery Date') ?></label>
+            <div class="input-box">
+                <select id="shipping-deliverydate" name="komplizierte_delivery_date" title="<?php echo $this->__('Desired Delivery Date') ?>">
+                    <?php foreach($dates as $date => $label):
+                        ?>
+                        <option value="<?php echo $date; ?>" <?php if($date == $this->getSelectedDeliveryDate()) echo ' selected="selected"';?>><?php echo $label; ?></option>
+                    <?php
+                    endforeach;
+                    ?>
+                </select>
+            </div>
+        </li>
+    <?php endif ?>
+    <?php echo $this->getChildHtml(); ?>
+</ul>
+<span id="delivery-dates-please-wait" class="a-left" style="display:none;">
+<img class="left" title="<?php echo $this->__('Fetching available delivery dates...')?>" alt="<?php echo $this->__('Fetching available delivery dates...')?>" src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif');?>">
+    <?php echo $this->__('Fetching available delivery dates...')?>
+</span>

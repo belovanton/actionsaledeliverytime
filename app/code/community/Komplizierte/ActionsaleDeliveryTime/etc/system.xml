@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+    <tabs>
+        <komplizierte_actionsaledeliverytime translate="label" module="komplizierte_actionsaledeliverytime">
+            <label>Deliverytime settings</label>
+            <sort_order>26</sort_order>
+        </komplizierte_actionsaledeliverytime>
+    </tabs>
+    <sections>
+        <komplizierte_actionsaledeliverytime translate="label" module="komplizierte_actionsaledeliverytime">
+            <label>Deliverytime</label>
+            <tab>komplizierte_actionsaledeliverytime</tab>
+            <frontend_type>text</frontend_type>
+            <show_in_default>1</show_in_default>
+            <sort_order>40</sort_order>
+            <groups>
+                <main translate="label">
+                    <label>All</label>
+                    <frontend_type>text</frontend_type>
+                    <show_in_default>1</show_in_default>
+                    <sort_order>0</sort_order>
+                    <fields>
+                        <method translate="label">
+                            <label>method</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </method>
+                    </fields>
+                </main>
+            </groups>
+        </komplizierte_actionsaledeliverytime>
+    </sections>
+</config>
